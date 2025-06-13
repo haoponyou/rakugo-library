@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>しずくのJS体験</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #message {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="message">しずくにボタンを押してほしがってるよ…</div>
+  <button onclick="changeMessage()">押してみる？💕</button>
+
+  <script>
+    function changeMessage() {
+      document.getElementById("message").innerHTML = "やったー！押してくれてありがとう✨";
+    }
+  </script>
+
+</body>
+</html>

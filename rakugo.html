@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>いっぽのらくごライブラリ</title>
+  <style>
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      background-color: #fff9f9;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #e75480;
+    }
+
+    .link-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 400px;
+    }
+
+    .link-card a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1.1em;
+    }
+.thumbnail {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+
+   button {
+  margin-top: 40px;
+  padding: 15px 40px;
+  font-size: 1.2em;
+  background-color:#734d8a;
+  color: #fff;
+  border: 3px solid #a97453;
+  border-radius: 20px 50px 20px 50px; /* 角をちょっと和っぽく */
+  box-shadow:
+    inset 0 3px 0 #c1a35e,
+    0 5px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #fff2cc;
+  transition: background-color 0.3s ease;
+  font-family: "Hiragino Mincho ProN", serif; /* 明朝体で和の雰囲気 */
+}
+
+button:hover {
+  background-color: #e6cfa0;
+/* 画面が狭いときだけフォントと画像を少し小さめにする */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  .link-card {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .thumbnail {
+    width: 80px;
+    height: 48px;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 12px 24px;
+  }
+}
+}
+  </style>
+</head>
+<body>
+
+  <h1>いっぽのらくごライブラリ🎙️</h1>
+
+  <div class="link-card">
+  <a href="https://youtu.be/k6G7auLEaIE?si=Ccq4UBtdJzKTAgFa" target="_blank">
+    <img src="https://img.youtube.com/vi/k6G7auLEaIE/hqdefault.jpg" alt="一之輔「不動坊」" class="thumbnail" />
+    <p>一之輔「不動坊」</p>
+  </a>
+</div>
+
+<div class="link-card">
+  <a href="https://music.amazon.co.jp/tracks/B00FYKTNBS?marketplaceId=A1VC38T7YXB528&musicTerritory=JP&ref=dm_sh_Nf8H5ioTSalQzxFazfZDi23Fe" target="_blank">
+    <img src="https://www.bunzou.com/blog_header_sp.jpg?1749117008" alt="橘家文蔵「らくだ」" class="thumbnail" />
+    <p>橘家文蔵「らくだ」</p>
+  </a>
+</div>
+
+<div class="link-card">
+  <a href="https://youtu.be/DrvCn4R1KfA?si=kqfr7iO7K_apmpzK" target="_blank">
+    <img src="https://img.youtube.com/vi/DrvCn4R1KfA/hqdefault.jpg" alt="六松亭多々良「珍宝イチ○損」" class="thumbnail" />
+    <p>六松亭多々良「珍宝イチ○損」</p>
+  </a>
+</div>
+
+  <button onclick="randomJump()">📎 今日の一席をひく！</button>
+
+  <script>
+    const links = [
+      "https://youtu.be/k6G7auLEaIE?si=Ccq4UBtdJzKTAgFa",
+      "https://music.amazon.co.jp/tracks/B00FYKTNBS?marketplaceId=A1VC38T7YXB528&musicTerritory=JP&ref=dm_sh_Nf8H5ioTSalQzxFazfZDi23Fe",
+      "https://youtu.be/DrvCn4R1KfA?si=kqfr7iO7K_apmpzK"
+    ];
+
+    function randomJump() {
+      const i = Math.floor(Math.random() * links.length);
+      window.location.href = links[i];
+    }
+  </script>
+
+</body>
+</html>

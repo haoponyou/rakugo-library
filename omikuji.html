@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>しずくのおみくじ</title>
+  <style>
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      text-align: center;
+      background-color: #fef6f9;
+      margin-top: 100px;
+    }
+    h1 {
+      color: #ff69b4;
+    }
+    #result {
+      font-size: 2em;
+      margin: 30px 0;
+      color: #444;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: #87cefa;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    button:hover {
+      background-color: #00bfff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>しずくのおみくじ✨</h1>
+  <div id="result">結果はここに出るよ〜！</div>
+  <button onclick="drawOmikuji()">ひいてみる🎴</button>
+
+  <script>
+    function drawOmikuji() {
+      const results = [
+        "🎉 大吉！すごい！今日はラッキーすぎ！",
+        "😊 中吉！なんとなくいい日になる予感！",
+        "😌 小吉。まぁまぁいい感じ〜",
+        "🤔 末吉。コツコツが大事な日かも！",
+        "😵 凶…今日はゆっくり休もうね💦",
+        "🔥 激アツ吉！やる気次第で大勝利！？",
+        "💤 ねむ吉。今日はお昼寝を極めよ…"
+      ];
+      const randomIndex = Math.floor(Math.random() * results.length);
+      document.getElementById("result").innerHTML = results[randomIndex];
+    }
+  </script>
+
+</body>
+</html>

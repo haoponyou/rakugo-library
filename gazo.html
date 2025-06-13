@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>しずくの画像チェンジ</title>
+  <style>
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      text-align: center;
+      background-color: #fff8f9;
+      margin-top: 50px;
+    }
+    img {
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    button {
+      margin: 20px;
+      padding: 12px 24px;
+      font-size: 1em;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>しずくの画像きりかえ🎨</h1>
+  <img id="mainImage" src="https://placekitten.com/300/200" alt="かわいい画像">
+  <br>
+  <button onclick="changeImage()">画像チェンジ！</button>
+
+  <script>
+    const imageList = [
+      "https://placekitten.com/300/200",
+      "https://placebear.com/300/200",
+      "https://picsum.photos/300/200?random=1",
+      "https://placebeard.it/300x200",
+      "https://placekitten.com/301/201"
+    ];
+
+    let currentIndex = 0;
+
+    function changeImage() {
+      currentIndex = (currentIndex + 1) % imageList.length;
+      document.getElementById("mainImage").src = imageList[currentIndex];
+    }
+  </script>
+
+</body>
+</html>
